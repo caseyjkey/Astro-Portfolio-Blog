@@ -8,7 +8,7 @@
 import "@styles/global.css";
 import "@fontsource-variable/inter";
 import { SEO } from "astro-seo";
-import { SITE_TITLE, SITE_DESCRIPTION, TWITTER_CREATOR } from "@src/consts";
+import { SITE_TITLE, SITE_DESCRIPTION, X_CREATOR } from "@src/consts";
 import { getLocale } from "astro-i18n-aut";
 
 interface Props {
@@ -57,7 +57,7 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = "/blog-place
 		description: description,
 		image: resolvedImageWithDomain,
 		imageAlt: title,
-		creator: TWITTER_CREATOR,
+		creator: X_CREATOR,
 	}}
 	extend={{
 		// extending the default link tags
@@ -82,8 +82,8 @@ const { title = SITE_TITLE, description = SITE_DESCRIPTION, image = "/blog-place
 				name: "twitter:image",
 				content: "https://user-images.githubusercontent.com/5182256/131216951-8f74f425-f775-463d-a11b-0e01ad9fce8d.png",
 			},
-			{ name: "twitter:title", content: "Tinker Tailor Soldier Spy" },
-			{ name: "twitter:description", content: "Agent" },
+			{ name: "twitter:title", content: "Casey Key's Website" },
+			{ name: "twitter:description", content: "Nouveau Software Engineering Blog and Portfolio" },
 		],
 	}}
 />

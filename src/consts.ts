@@ -2,16 +2,16 @@
 // You can import this data from anywhere in your site by using the `import` keyword.
 
 // Website metadata
-export const SITE_URL: string = "https://astrostarter.zank.studio";
-export const SITE_TITLE: string = "Astro Blog";
-export const SITE_DESCRIPTION: string = "Welcome to my website!";
+export const SITE_URL: string = "https://dashing-lollipop-a699c4.netlify.app";
+export const SITE_TITLE: string = "Casey Key";
+export const SITE_DESCRIPTION: string = "Welcome to my blog and portfolio!";
 
 // Repo info
-export const REPO: string = "zankhq/astro-starter"; // TODO: Update dynamically
+export const REPO: string = "caseyjkey/astro-portfolio-blog"; // TODO: Update dynamically
 export const DEFAULT_BRANCH: string = "main"; // TODO: Update dynamically
 
 // SEO metadata
-export const TWITTER_CREATOR: string = "@xxx";
+export const X_CREATOR: string = "@caseyjgkey";
 
 // Navigation
 type Page = {
@@ -43,4 +43,4 @@ export const LOCALES = {
 };
 
 // Hosting
-export const HOSTING_SERVICE: "cloudflare" | "netlify" | "none" = "cloudflare";
+export const HOSTING_SERVICE: "cloudflare" | "netlify" | "none" = "netlify";
