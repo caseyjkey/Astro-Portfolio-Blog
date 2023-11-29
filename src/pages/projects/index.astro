@@ -12,7 +12,7 @@ const locale = getLocale(Astro.url) ?? DEFAULT_LOCALE;
 const localeUrlPrefix = getLocaleUrlPrefix(Astro.url);
 
 const projects = (await getCollection("projects", (entry) => entry.id.startsWith(`${locale}/`)))
-	.sort((a, b) => a.data.start.valueOf() - b.data.start.valueOf())
+	.sort((a, b) => b.data.start.valueOf() - a.data.start.valueOf())
 	.map<CollectionEntry<"projects"> & { href: string }>((project) => {
 		return {
 			href: localeUrlPrefix + "/projects" + project.id.replace(locale, "") + "/",

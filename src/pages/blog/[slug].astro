@@ -1,6 +1,6 @@
 ---
 import { type CollectionEntry, getCollection, getEntry } from "astro:content";
-import Project from "@layouts/Project.astro";
+import BlogItem from "@layouts/BlogItem.astro";
 import { getLocale } from "astro-i18n-aut";
 import { DEFAULT_LOCALE } from "../../consts";
 
@@ -11,25 +11,24 @@ export async function getStaticPaths() {
 	}));
 }
 
-type Props = CollectionEntry<"project">;
+type Props = CollectionEntry<"blog">;
 
 const { slug } = Astro.params;
 const locale = getLocale(Astro.url) ?? DEFAULT_LOCALE;
 
-const project = await getEntry({
-	collection: "portfolio",
+const blog = await getEntry({
+	collection: "blog",
 	slug: locale + "/" + slug,
 });
-if (!project) {
+if (!blog) {
 	return new Response(null, {
 		status: 404,
 		statusText: "Not found",
 	});
 }
-const { Content } = await project
-.render();
+const { Content } = await blog.render();
 ---
 
-<Project {...project.data}>
+<BlogItem {...blog.data}>
 	<Content />
-</Project>
+</BlogItem>
