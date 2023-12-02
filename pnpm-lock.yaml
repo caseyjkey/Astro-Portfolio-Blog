@@ -38,6 +38,9 @@ dependencies:
   astro-netlify-cms:
     specifier: ^0.5.4
     version: 0.5.4(astro@3.5.4)(graphql@15.8.0)
+  flowbite:
+    specifier: ^2.2.0
+    version: 2.2.0
   tailwindcss:
     specifier: ^3.3.5
     version: 3.3.5
@@ -1210,6 +1213,10 @@ packages:
 
   /@petamoriken/float16@3.8.3:
     resolution: {integrity: sha512-an2OZ7/6er9Jja8EDUvU/tmtGIutdlb6LwXOwgjzoCjDRAsUd8sRZMBjoPEy78Xa9iOp+Kglk2CHgVwZuZbWbw==}
+    dev: false
+
+  /@popperjs/core@2.11.8:
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
   /@react-dnd/asap@4.0.1:
@@ -3064,6 +3071,13 @@ packages:
     dependencies:
       micromatch: 4.0.5
       pkg-dir: 4.2.0
+    dev: false
+
+  /flowbite@2.2.0:
+    resolution: {integrity: sha512-Eq0qWz4a5nlxaGuUcspzpu+8Ny0A7lKEJEKcuPpkdSoF8tWjbKeuVVgKk8/q10ZE9bhXh1GHBXdCsRxu0LZTNQ==}
+    dependencies:
+      '@popperjs/core': 2.11.8
+      mini-svg-data-uri: 1.4.4
     dev: false
 
   /fn.name@1.1.0:
@@ -5112,6 +5126,11 @@ packages:
     resolution: {integrity: sha512-9Wy1B3m3f66bPPmU5hdA4DR4PB2OfDU/+GS3yAB7IQozE3tqXaVv2zOjgla7MEGSRv95+ILmOuvhLkOK6wJtCQ==}
     dependencies:
       dom-walk: 0.1.2
+    dev: false
+
+  /mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
     dev: false
 
   /minimatch@3.1.2:
