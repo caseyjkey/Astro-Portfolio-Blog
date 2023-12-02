@@ -14,7 +14,7 @@ const { title, description, start, end = "present", image, galleryImages } = Ast
 	<article class="pt-16">
 		<div class="w-full px-4">
 			{ galleryImages && 
-				<div id="default-carousel" class="relative w-full" data-carousel="slide">
+				<div id="default-carousel" class="relative w-full" data-carousel="static">
 					<!-- Carousel wrapper -->
 					<div class="relative h-56 overflow-hidden rounded-lg md:h-96">
 						{galleryImages.map(({ image }) => 
