@@ -41,6 +41,9 @@ dependencies:
   flowbite:
     specifier: ^2.2.0
     version: 2.2.0
+  react-icons:
+    specifier: ^4.12.0
+    version: 4.12.0(react@17.0.2)
   tailwindcss:
     specifier: ^3.3.5
     version: 3.3.5
@@ -6842,6 +6845,14 @@ packages:
       react-lifecycles-compat: 3.0.4
       shallowequal: 1.1.0
       source-map: 0.7.4
+    dev: false
+
+  /react-icons@4.12.0(react@17.0.2):
+    resolution: {integrity: sha512-IBaDuHiShdZqmfc/TwHu6+d6k2ltNCf3AszxNmjJc1KUfXdEeRJOKyNvLmAHaarhzGmTSVygNdyu8/opXv2gaw==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /react-immutable-proptypes@2.2.0(immutable@3.8.2):

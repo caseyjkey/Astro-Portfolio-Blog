@@ -1,13 +1,35 @@
 ---
+import React, { lazy, Suspense } from 'react'
 import type { CollectionEntry } from "astro:content";
 import HeroImage from "@components/blog/HeroImage.astro";
 import Layout from "@layouts/Layout.astro";
 import Title from "@src/components/blog/BlogHeader.astro";
 import Comments from "@src/components/blog/Comments.astro";
+import * as FontAwesome from 'react-icons/fa';
+import * as IonIcons from 'react-icons/io';
+import * as DevIcons from 'react-icons/di';
+
 
 type Props = CollectionEntry<"projects">["data"];
 
-const { title, description, start, end = "present", image, galleryImages } = Astro.props as Props;
+const { title, description, icons, start, end = "present", image, galleryImages } = Astro.props as Props;
+
+
+var Icons: React.ComponentType[] = [];
+for (var IconSet in icons) {
+	switch (IconSet) {
+		case 'fa':
+			icons[IconSet]?.map((Icon: string) => Icons.push(FontAwesome[Icon]));
+			break;
+		case 'io':
+			icons[IconSet]?.map((Icon: string) => Icons.push(IonIcons[Icon]));
+			break;
+		case 'di':
+			icons[IconSet]?.map((Icon: string) => Icons.push(DevIcons[Icon]));
+			break;
+	}
+}
+
 ---
 
 <Layout title={title} description={description}>
@@ -52,6 +74,11 @@ const { title, description, start, end = "present", image, galleryImages } = Ast
 		<div class="prose mx-auto max-w-screen-md space-y-4 px-4">
 			<div class="space-y-4 text-center">
 				<Title pubDate={start} updatedDate={end} name={`title-${title}`} class="m-0 mb-2">{title}</Title>
+				<ul>
+					{Icons.map((Icon) => 
+						<li>{React.createElement(Icon)}</li>
+					)}
+				</ul>
 				<hr />
 			</div>
 			<slot />
