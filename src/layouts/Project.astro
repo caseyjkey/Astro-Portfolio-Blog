@@ -5,9 +5,9 @@ import HeroImage from "@components/blog/HeroImage.astro";
 import Layout from "@layouts/Layout.astro";
 import Title from "@src/components/blog/BlogHeader.astro";
 import Comments from "@src/components/blog/Comments.astro";
-import * as FontAwesome from 'react-icons/fa';
-import * as IonIcons from 'react-icons/io';
-import * as DevIcons from 'react-icons/di';
+import * as FontAwesome from 'react-icons/fa/index.js';
+import * as IonIcons from 'react-icons/io/index.js';
+import * as DevIcons from 'react-icons/di/index.js';
 
 
 type Props = CollectionEntry<"projects">["data"];
@@ -30,6 +30,7 @@ for (var IconSet in icons) {
 	}
 }
 
+console.log(Icons);
 ---
 
 <Layout title={title} description={description}>
@@ -76,7 +77,7 @@ for (var IconSet in icons) {
 				<Title pubDate={start} updatedDate={end} name={`title-${title}`} class="m-0 mb-2">{title}</Title>
 				<ul>
 					{Icons.map((Icon) => 
-						<li>{React.createElement(Icon)}</li>
+						<li><Icon /></li>
 					)}
 				</ul>
 				<hr />
